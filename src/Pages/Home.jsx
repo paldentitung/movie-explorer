@@ -12,7 +12,7 @@ const Home = () => {
       ></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col h-full">
+      <div className="relative z-10 flex flex-col h-full  ">
         <Header />
         <Hero />
         <TrendingMovies />
