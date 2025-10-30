@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-6 w-full max-w-6xl mx-auto text-white text-center justify-center items-center min-h-screen ">
+    <div className="flex flex-col gap-6 w-full max-w-6xl mx-auto text-white text-center justify-center items-center min-h-screen p-4 ">
       {/* hero  title  */}
       <h1 className="text-2xl md:text-4xl font-semibold text-gray-200 ">
         Discover Your Next Favorite Movie
