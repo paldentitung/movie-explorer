@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
-
+import TrendingMovies from "../Components/TrendingMovies";
 const Home = () => {
   return (
     <div className="relative w-full h-screen">
@@ -15,6 +15,7 @@ const Home = () => {
       <div className="relative z-10 flex flex-col h-full">
         <Header />
         <Hero />
+        <TrendingMovies />
       </div>
     </div>
   );
