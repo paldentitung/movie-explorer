@@ -17,7 +17,7 @@ const Hero = () => {
         <input
           type="search"
           placeholder="Search through thousands of movies"
-          className="w-full max-w-xl md:max-w-2xl px-4 py-3   outline-none border "
+          className="w-full max-w-xl md:max-w-2xl px-4 py-3   outline-none ring focus:border-0 focus:ring focus:ring-teal-500 "
         />
       </div>
     </div>
