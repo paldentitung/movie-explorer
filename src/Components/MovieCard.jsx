@@ -1,3 +1,4 @@
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 const MovieCard = ({ movie }) => {
   const imageUrl = movie.poster_path
     ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
@@ -15,7 +16,7 @@ const MovieCard = ({ movie }) => {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 rounded-md"></div>
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 rounded-md"></div>
 
       <div className="absolute top-0 right-0 p-2 hidden group-hover:block ">
         <p className="text-xs text-yellow-400 font-semibold">
@@ -23,10 +24,14 @@ const MovieCard = ({ movie }) => {
         </p>
       </div>
 
+      <div className="absolute bottom-2 right-0 p-2 hidden group-hover:block ">
+        <AiFillStar size={20} />
+      </div>
+
       <div className="absolute bottom-1 left-0 w-full">
         <div className="p-4 flex flex-col gap-1">
           <h3 className="text-md font-semibold">{movie.title}</h3>
-          <p className="text-sm text-gray-400">{movie.release_date}</p>
+          <p className="text-sm text-gray-200">{movie.release_date}</p>
         </div>
       </div>
     </div>

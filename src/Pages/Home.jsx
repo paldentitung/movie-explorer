@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
 import TrendingMovies from "../Components/TrendingMovies";
+import Footer from "../Components/Footer";
 const Home = () => {
   return (
     <div className="relative w-full h-screen">
@@ -16,6 +17,7 @@ const Home = () => {
         <Header />
         <Hero />
         <TrendingMovies />
+        <Footer />
       </div>
     </div>
   );
