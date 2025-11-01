@@ -10,3 +10,16 @@ export const getTrendingMovies = async () => {
   const data = await res.json();
   return data.results;
 };
+
+// get detail of a single movie
+export const getMovieDetail = async (movieId) => {
+  if (!API_KEY) {
+    throw new Error("API key is missing. Check your .env file");
+  }
+
+  const res = await fetch(
+    `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=en-US`
+  );
+  const data = await res.json();
+  return data;
+};

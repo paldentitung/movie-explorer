@@ -1,12 +1,16 @@
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const MovieCard = ({ movie }) => {
   const imageUrl = movie.poster_path
     ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
     : "https://via.placeholder.com/500x750?text=No+Image";
 
   return (
-    <div className="relative bg-gray-800 text-white shadow-md group rounded-md overflow-hidden hover:cursor-pointer hover:shadow-lg">
-      <div className="aspect-w-2 aspect-h-3 w-full">
+    <Link
+      to={`/movie/${movie.id}`}
+      className="relative bg-gray-800 text-white shadow-md group rounded-md overflow-hidden hover:cursor-pointer hover:shadow-lg"
+    >
+      <div className="w-full h-112 overflow-hidden relative">
         <img
           src={imageUrl}
           alt={movie.title}
@@ -34,7 +38,7 @@ const MovieCard = ({ movie }) => {
           <p className="text-sm text-gray-200">{movie.release_date}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
