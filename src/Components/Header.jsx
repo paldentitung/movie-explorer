@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { AppContext } from "../Context/AppContext";
 
 const Header = () => {
+  // state for showing menu
   const [showMenu, setShowMenu] = useState(false);
-
+  // using context for theme
+  const { theme, toggleTheme } = useContext(AppContext);
   useEffect(() => {
     if (showMenu) {
       document.body.style.overflow = "hidden";
@@ -54,8 +57,17 @@ const Header = () => {
           </div>
 
           {/* theme toggle */}
-          <div className="w-18 h-7 border rounded-full flex items-center p-1">
-            <span className="w-5 h-5 bg-white rounded-full"></span>
+          <div
+            onClick={toggleTheme}
+            className="w-17 h-8 border rounded-full flex items-center p-1 cursor-pointer"
+          >
+            <span
+              className={`w-6 h-6 rounded-full transition-all duration-300 ${
+                theme === "light"
+                  ? "bg-white translate-x-0"
+                  : "bg-teal-500 translate-x-8"
+              }`}
+            ></span>
           </div>
         </div>
       </div>

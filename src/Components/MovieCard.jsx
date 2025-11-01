@@ -24,8 +24,8 @@ const MovieCard = ({ movie }) => {
         </p>
       </div>
 
-      <div className="absolute bottom-2 right-0 p-2 hidden group-hover:block ">
-        <AiFillStar size={20} />
+      <div className="absolute bottom-4 right-0 p-2 hidden group-hover:block ">
+        <AiFillStar size={25} />
       </div>
 
       <div className="absolute bottom-1 left-0 w-full">
